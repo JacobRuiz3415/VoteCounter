@@ -1,23 +1,35 @@
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
 
 
 
 public class Main {
     public static void main(String[] args){
-        //create file
-        File x = new File("votes");
-
-        System.out.println("Hello world");
-        if(x.exists()){
-            System.out.println(x.getName() + " does exists");
-        }
-        else
-        {
-            System.out.println("The File does not exist");
-        }
+        //cadidateList 4 candidate
+        int[] candidateList = {4};
+        //create file 
+        // //read file
         
+        try {
+            File x = new File("votes");
+            Scanner sc = new Scanner(x);
+            System.out.println("file exists");
 
-        int vote = 0;
+            //read file line by line
+            while (sc.hasNext()) { 
+                System.out.println(sc.next());
+            }
+            
+
+
+        } catch (FileNotFoundException e) {
+            System.out.println("file does not exist");
+        }
+
+       
+
+
 
     }
 }
