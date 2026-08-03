@@ -8,10 +8,11 @@ public class Main {
     public static void main(String[] args){
         //cadidateList 4 candidate
         int[] candidateList = {5};
-        //create file 
+        
         // //read file
         
         try {
+            //create file 
             File x = new File("votes");
             Scanner sc = new Scanner(x);
             System.out.println("file exists");
